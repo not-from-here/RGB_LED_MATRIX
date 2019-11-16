@@ -1,5 +1,5 @@
 Flow report for led
-Sat Nov 16 20:44:48 2019
+Sat Nov 16 22:11:34 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Sat Nov 16 20:44:48 2019           ;
+; Flow Status                        ; Successful - Sat Nov 16 22:11:33 2019           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; led                                             ;
 ; Top-level Entity Name              ; matrix_block                                    ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/16/2019 20:44:43 ;
+; Start date & time ; 11/16/2019 22:11:29 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; led                 ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------+---------------+--------------+----------------+
 ; Assignment Name                     ; Value                           ; Default Value ; Entity Name  ; Section Id     ;
 +-------------------------------------+---------------------------------+---------------+--------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 220167884995020.157392988311096 ; --            ; --           ; --             ;
+; COMPILER_SIGNATURE_ID               ; 220167884995020.157393508901328 ; --            ; --           ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                            ; --            ; --           ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)          ; <None>        ; --           ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --           ; --             ;
@@ -93,7 +93,7 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:05     ; 1.0                     ; 4659 MB             ; 00:00:04                           ;
+; Analysis & Synthesis ; 00:00:05     ; 1.0                     ; 4654 MB             ; 00:00:04                           ;
 ; Total                ; 00:00:05     ; --                      ; --                  ; 00:00:04                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
