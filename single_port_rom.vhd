@@ -17,7 +17,7 @@ entity single_port_rom is
 	(
 		clk	: in std_logic;
 		addr	: in natural range 0 to 2**ADDR_WIDTH - 1;
-		q		: out std_logic_vector((DATA_WIDTH -1) downto 0)
+		q	: out std_logic_vector((DATA_WIDTH -1) downto 0)
 	);
 
 end entity;
