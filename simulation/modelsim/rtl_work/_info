@@ -1,0 +1,77 @@
+m255
+K3
+13
+cModel Technology
+Z0 dF:\Desktop\Need\AE\LED\simulation\modelsim
+Edecode32
+Z1 w1569348348
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dF:\Desktop\Need\AE\LED\simulation\modelsim
+Z6 8F:/Desktop/Need/AE/LED/decode32.vhd
+Z7 FF:/Desktop/Need/AE/LED/decode32.vhd
+l0
+L5
+VKki_8a:agRMXAR5oG]YCh3
+!s100 Y=_6W=UkUGgRTNDL5DO@V3
+Z8 OV;C;10.1d;51
+31
+!i10b 1
+Z9 !s108 1569348383.494000
+Z10 !s90 -reportprogress|300|-93|-work|work|F:/Desktop/Need/AE/LED/decode32.vhd|
+Z11 !s107 F:/Desktop/Need/AE/LED/decode32.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+Abdf_type
+R2
+R3
+R4
+DEx4 work 8 decode32 0 22 Kki_8a:agRMXAR5oG]YCh3
+l86
+L13
+V`3@c=kZj?2CDQ6U516NQC0
+!s100 RL7U_aL6`G5bP`enRHC4?0
+R8
+31
+!i10b 1
+R9
+R10
+R11
+R12
+R13
+Elpm_decode1
+Z14 w1569346966
+R3
+R4
+R5
+Z15 8F:/Desktop/Need/AE/LED/lpm_decode1.vhd
+Z16 FF:/Desktop/Need/AE/LED/lpm_decode1.vhd
+l0
+L42
+VBB7Z0gMTjVAdNlD6lgBIh2
+R8
+31
+Z17 !s108 1569348383.309000
+Z18 !s90 -reportprogress|300|-93|-work|work|F:/Desktop/Need/AE/LED/lpm_decode1.vhd|
+Z19 !s107 F:/Desktop/Need/AE/LED/lpm_decode1.vhd|
+R12
+R13
+!s100 NNSA=B:j=7Fe>aR962GGb0
+!i10b 1
+Asyn
+R3
+R4
+DEx4 work 11 lpm_decode1 0 22 BB7Z0gMTjVAdNlD6lgBIh2
+l132
+L82
+V>>CSM_jf^KQlg`z^lMg3=1
+R8
+31
+R17
+R18
+R19
+R12
+R13
+!s100 jCTVU[WnhRld@D8OLIzPI1
+!i10b 1

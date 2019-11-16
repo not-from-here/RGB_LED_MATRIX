@@ -1,0 +1,16 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+
+entity decode is
+  port
+  (
+    rowIn  :  IN   STD_LOGIC_VECTOR(4 DOWNTO 0);
+    rowOut :  OUT  STD_LOGIC_VECTOR(31 DOWNTO 0)
+  );
+end decode;
+
+architecture rtl of decode is
+begin
+end rtl;

@@ -1,0 +1,20 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+entity matrix_cntr is 
+generic 
+	(
+		DATA_WIDTH : natural := 8
+	);
+port
+  (
+    clk: in std_logic;
+	 smth: in std_logic;
+	 q		: in std_logic_vector((DATA_WIDTH -1) downto 0)
+	 row_out :  OUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
+	 result	: OUT STD_LOGIC_VECTOR (7 DOWNTO 0)
+  );
+end matrix_cntr;
+
+architecture rtl of matrix_cntr is
+begin
+end rtl;

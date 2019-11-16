@@ -1,0 +1,22 @@
+Info: Start Nativelink Simulation process
+
+========= EDA Simulation Settings =====================
+
+Sim Mode              :  Gate
+Family                :  cycloneii
+Quartus root          :  f:/desktop/need/ae/quartus/bin64/
+Quartus sim root      :  f:/desktop/need/ae/quartus/eda/sim_lib
+Simulation Tool       :  modelsim-altera
+Simulation Language   :  vhdl
+Version               :  93
+Simulation Mode       :  GUI
+Sim Output File       :  led.vho
+Sim SDF File       :  led_vhd.sdo
+Sim dir               :  simulation\modelsim
+
+=======================================================
+
+Info: Starting NativeLink simulation with ModelSim-Altera software
+Sourced NativeLink script f:/desktop/need/ae/quartus/common/tcl/internal/nativelink/modelsim.tcl
+Warning: File led_run_msim_gate_vhdl.do already exists - backing up current file as led_run_msim_gate_vhdl.do.bak
+Info: Spawning ModelSim-Altera Simulation software 

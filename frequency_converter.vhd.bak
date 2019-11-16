@@ -1,0 +1,15 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all; 
+
+entity frequency_converter is  
+	 port( 
+		 clkIn : in std_logic;
+		 clkOut : out std_logic
+	 );
+end divisor;
+
+architecture arh of frequency_converter is
+begin	
+end arh;       

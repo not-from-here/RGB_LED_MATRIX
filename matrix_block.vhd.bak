@@ -1,0 +1,17 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+entity matrix_block is 
+	
+port
+  (
+		clk: in std_logic;
+		on_off_in: in std_logic;
+		swich_in: in std_logic;
+	 row_out :  OUT  STD_LOGIC_VECTOR(31 DOWNTO 0);
+	 result	: OUT STD_LOGIC_VECTOR (7 DOWNTO 0)
+  );
+end matrix_block;
+
+architecture rtl of matrix_block is
+begin
+end rtl;
