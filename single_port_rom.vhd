@@ -10,7 +10,7 @@ entity single_port_rom is
 	generic 
 	(
 		DATA_WIDTH : natural := 8;
-		ADDR_WIDTH : natural := 7
+		ADDR_WIDTH : natural := 15
 	);
 
 	port 
