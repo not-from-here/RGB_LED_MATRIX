@@ -30,7 +30,7 @@ architecture rtl of simple_dual_port_ram_single_clock is
 	type memory_t is array (2**ADDR_WIDTH - 1 downto 0) of word_t;
 
 	-- Declare the RAM signal.	
-	signal ram : memory_t := ("00000000", -- A 0
+	signal ram : memory_t := ("00000000", -- A0
 	                          "00000000",
 	                          "00000000",
 	                          "00000000",
