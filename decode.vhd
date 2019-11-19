@@ -17,7 +17,7 @@ architecture rtl of decode is
 begin
 	process(row_in)
 	begin
-		for i in row_in'range loop
+		for i in row_out'range loop
 			if row_in = STD_LOGIC_VECTOR(to_unsigned(i, ADDR_WIDTH)) then
 				row_out(i) <= '1';
 			else

@@ -27,7 +27,7 @@ begin
 		variable cnt : integer range MIN_COUNT to MAX_COUNT;
 	begin
 		if (rising_edge(clk)) then
-			cnt := 0;
+			--cnt := 0;
 			cnt := cnt + 1;
 		end if;
 		qq   <= cnt;

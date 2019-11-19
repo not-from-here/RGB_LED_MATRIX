@@ -1,5 +1,5 @@
 Analysis & Synthesis report for led
-Sat Nov 16 22:11:34 2019
+Tue Nov 19 13:45:49 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -15,22 +15,21 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
   9. User-Specified and Inferred Latches
- 10. Registers Removed During Synthesis
- 11. General Register Statistics
- 12. Registers Packed Into Inferred Megafunctions
- 13. Source assignments for matrix_cntr:p6|simple_dual_port_ram_single_clock:p2|altsyncram:ram_rtl_0|altsyncram_d191:auto_generated
- 14. Parameter Settings for User Entity Instance: frequency_converter:p1
- 15. Parameter Settings for User Entity Instance: printer:p4
- 16. Parameter Settings for User Entity Instance: single_port_rom:p5
- 17. Parameter Settings for User Entity Instance: matrix_cntr:p6
- 18. Parameter Settings for User Entity Instance: matrix_cntr:p6|binary_counter:p1
- 19. Parameter Settings for User Entity Instance: matrix_cntr:p6|simple_dual_port_ram_single_clock:p2
- 20. Parameter Settings for User Entity Instance: matrix_cntr:p6|decode:p3
- 21. Parameter Settings for Inferred Entity Instance: matrix_cntr:p6|simple_dual_port_ram_single_clock:p2|altsyncram:ram_rtl_0
- 22. altsyncram Parameter Settings by Entity Instance
- 23. Port Connectivity Checks: "matrix_cntr:p6|simple_dual_port_ram_single_clock:p2"
- 24. Elapsed Time Per Partition
- 25. Analysis & Synthesis Messages
+ 10. General Register Statistics
+ 11. Registers Packed Into Inferred Megafunctions
+ 12. Source assignments for matrix_cntr:p6|simple_dual_port_ram_single_clock:p2|altsyncram:ram_rtl_0|altsyncram_d191:auto_generated
+ 13. Parameter Settings for User Entity Instance: frequency_converter:p1
+ 14. Parameter Settings for User Entity Instance: printer:p4
+ 15. Parameter Settings for User Entity Instance: single_port_rom:p5
+ 16. Parameter Settings for User Entity Instance: matrix_cntr:p6
+ 17. Parameter Settings for User Entity Instance: matrix_cntr:p6|binary_counter:p1
+ 18. Parameter Settings for User Entity Instance: matrix_cntr:p6|simple_dual_port_ram_single_clock:p2
+ 19. Parameter Settings for User Entity Instance: matrix_cntr:p6|decode:p3
+ 20. Parameter Settings for Inferred Entity Instance: matrix_cntr:p6|simple_dual_port_ram_single_clock:p2|altsyncram:ram_rtl_0
+ 21. altsyncram Parameter Settings by Entity Instance
+ 22. Port Connectivity Checks: "matrix_cntr:p6|simple_dual_port_ram_single_clock:p2"
+ 23. Elapsed Time Per Partition
+ 24. Analysis & Synthesis Messages
 
 
 
@@ -56,18 +55,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Nov 16 22:11:33 2019           ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov 19 13:45:48 2019           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; led                                             ;
 ; Top-level Entity Name              ; matrix_block                                    ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 53                                              ;
-;     Total combinational functions  ; 52                                              ;
-;     Dedicated logic registers      ; 26                                              ;
-; Total registers                    ; 26                                              ;
-; Total pins                         ; 59                                              ;
+; Total logic elements               ; 128                                             ;
+;     Total combinational functions  ; 128                                             ;
+;     Dedicated logic registers      ; 29                                              ;
+; Total registers                    ; 29                                              ;
+; Total pins                         ; 60                                              ;
 ; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 16                                              ;
+; Total memory bits                  ; 1,024                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
 ; Total PLLs                         ; 0                                               ;
 +------------------------------------+-------------------------------------------------+
@@ -199,35 +198,35 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------------------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimated Total logic elements              ; 53    ;
-;                                             ;       ;
-; Total combinational functions               ; 52    ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 20    ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 32    ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 29    ;
-;     -- arithmetic mode                      ; 23    ;
-;                                             ;       ;
-; Total registers                             ; 26    ;
-;     -- Dedicated logic registers            ; 26    ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 59    ;
-; Total memory bits                           ; 16    ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 25    ;
-; Total fan-out                               ; 219   ;
-; Average fan-out                             ; 1.51  ;
-+---------------------------------------------+-------+
++----------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                            ;
++---------------------------------------------+------------------------------------------+
+; Resource                                    ; Usage                                    ;
++---------------------------------------------+------------------------------------------+
+; Estimated Total logic elements              ; 128                                      ;
+;                                             ;                                          ;
+; Total combinational functions               ; 128                                      ;
+; Logic element usage by number of LUT inputs ;                                          ;
+;     -- 4 input functions                    ; 49                                       ;
+;     -- 3 input functions                    ; 33                                       ;
+;     -- <=2 input functions                  ; 46                                       ;
+;                                             ;                                          ;
+; Logic elements by mode                      ;                                          ;
+;     -- normal mode                          ; 97                                       ;
+;     -- arithmetic mode                      ; 31                                       ;
+;                                             ;                                          ;
+; Total registers                             ; 29                                       ;
+;     -- Dedicated logic registers            ; 29                                       ;
+;     -- I/O registers                        ; 0                                        ;
+;                                             ;                                          ;
+; I/O pins                                    ; 60                                       ;
+; Total memory bits                           ; 1024                                     ;
+; Embedded Multiplier 9-bit elements          ; 0                                        ;
+; Maximum fan-out node                        ; matrix_cntr:p6|binary_counter:p1|Add1~12 ;
+; Maximum fan-out                             ; 32                                       ;
+; Total fan-out                               ; 562                                      ;
+; Average fan-out                             ; 2.50                                     ;
++---------------------------------------------+------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -235,14 +234,15 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                   ; Library Name ;
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+--------------+
-; |matrix_block                                ; 52 (0)            ; 26 (0)       ; 16          ; 0            ; 0       ; 0         ; 59   ; 0            ; |matrix_block                                                                                                         ; work         ;
-;    |frequency_converter:p1|                  ; 44 (44)           ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matrix_block|frequency_converter:p1                                                                                  ; work         ;
-;    |matrix_cntr:p6|                          ; 8 (0)             ; 1 (0)        ; 16          ; 0            ; 0       ; 0         ; 0    ; 0            ; |matrix_block|matrix_cntr:p6                                                                                          ; work         ;
-;       |DEmux:p4|                             ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matrix_block|matrix_cntr:p6|DEmux:p4                                                                                 ; work         ;
-;       |binary_counter:p1|                    ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matrix_block|matrix_cntr:p6|binary_counter:p1                                                                        ; work         ;
-;       |simple_dual_port_ram_single_clock:p2| ; 0 (0)             ; 0 (0)        ; 16          ; 0            ; 0       ; 0         ; 0    ; 0            ; |matrix_block|matrix_cntr:p6|simple_dual_port_ram_single_clock:p2                                                     ; work         ;
-;          |altsyncram:ram_rtl_0|              ; 0 (0)             ; 0 (0)        ; 16          ; 0            ; 0       ; 0         ; 0    ; 0            ; |matrix_block|matrix_cntr:p6|simple_dual_port_ram_single_clock:p2|altsyncram:ram_rtl_0                                ; work         ;
-;             |altsyncram_d191:auto_generated| ; 0 (0)             ; 0 (0)        ; 16          ; 0            ; 0       ; 0         ; 0    ; 0            ; |matrix_block|matrix_cntr:p6|simple_dual_port_ram_single_clock:p2|altsyncram:ram_rtl_0|altsyncram_d191:auto_generated ; work         ;
+; |matrix_block                                ; 128 (0)           ; 29 (0)       ; 1024        ; 0            ; 0       ; 0         ; 60   ; 0            ; |matrix_block                                                                                                         ; work         ;
+;    |frequency_converter:p1|                  ; 40 (40)           ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matrix_block|frequency_converter:p1                                                                                  ; work         ;
+;    |matrix_cntr:p6|                          ; 88 (0)            ; 7 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |matrix_block|matrix_cntr:p6                                                                                          ; work         ;
+;       |DEmux:p4|                             ; 36 (36)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matrix_block|matrix_cntr:p6|DEmux:p4                                                                                 ; work         ;
+;       |binary_counter:p1|                    ; 14 (14)           ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matrix_block|matrix_cntr:p6|binary_counter:p1                                                                        ; work         ;
+;       |decode:p3|                            ; 38 (38)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |matrix_block|matrix_cntr:p6|decode:p3                                                                                ; work         ;
+;       |simple_dual_port_ram_single_clock:p2| ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |matrix_block|matrix_cntr:p6|simple_dual_port_ram_single_clock:p2                                                     ; work         ;
+;          |altsyncram:ram_rtl_0|              ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |matrix_block|matrix_cntr:p6|simple_dual_port_ram_single_clock:p2|altsyncram:ram_rtl_0                                ; work         ;
+;             |altsyncram_d191:auto_generated| ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |matrix_block|matrix_cntr:p6|simple_dual_port_ram_single_clock:p2|altsyncram:ram_rtl_0|altsyncram_d191:auto_generated ; work         ;
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -256,32 +256,38 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+---------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                               ;
-+----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
-+----------------------------------------------------+---------------------+------------------------+
-; matrix_cntr:p6|DEmux:p4|R[0]                       ; VCC                 ; yes                    ;
-; matrix_cntr:p6|DEmux:p4|R[1]                       ; VCC                 ; yes                    ;
-; matrix_cntr:p6|DEmux:p4|R[2]                       ; VCC                 ; yes                    ;
-; matrix_cntr:p6|DEmux:p4|R[3]                       ; VCC                 ; yes                    ;
-; matrix_cntr:p6|DEmux:p4|R[4]                       ; VCC                 ; yes                    ;
-; matrix_cntr:p6|DEmux:p4|R[5]                       ; VCC                 ; yes                    ;
-; matrix_cntr:p6|DEmux:p4|R[6]                       ; VCC                 ; yes                    ;
-; matrix_cntr:p6|DEmux:p4|R[7]                       ; VCC                 ; yes                    ;
-; Number of user-specified and inferred latches = 8  ;                     ;                        ;
-+----------------------------------------------------+---------------------+------------------------+
++----------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                  ;
++-----------------------------------------------------+---------------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal                   ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------------------------+------------------------+
+; matrix_cntr:p6|DEmux:p4|R[0]                        ; matrix_cntr:p6|DEmux:p4|Equal0        ; yes                    ;
+; matrix_cntr:p6|DEmux:p4|R[1]                        ; matrix_cntr:p6|DEmux:p4|Equal0        ; yes                    ;
+; matrix_cntr:p6|DEmux:p4|R[2]                        ; matrix_cntr:p6|DEmux:p4|Equal0        ; yes                    ;
+; matrix_cntr:p6|DEmux:p4|R[3]                        ; matrix_cntr:p6|DEmux:p4|Equal0        ; yes                    ;
+; matrix_cntr:p6|DEmux:p4|R[4]                        ; matrix_cntr:p6|DEmux:p4|Equal0        ; yes                    ;
+; matrix_cntr:p6|DEmux:p4|R[5]                        ; matrix_cntr:p6|DEmux:p4|Equal0        ; yes                    ;
+; matrix_cntr:p6|DEmux:p4|R[6]                        ; matrix_cntr:p6|DEmux:p4|Equal0        ; no                     ;
+; matrix_cntr:p6|DEmux:p4|R[7]                        ; matrix_cntr:p6|DEmux:p4|Equal0        ; no                     ;
+; matrix_cntr:p6|DEmux:p4|G[0]                        ; matrix_cntr:p6|binary_counter:p1|Add1 ; no                     ;
+; matrix_cntr:p6|DEmux:p4|G[1]                        ; matrix_cntr:p6|binary_counter:p1|Add1 ; no                     ;
+; matrix_cntr:p6|DEmux:p4|G[2]                        ; matrix_cntr:p6|binary_counter:p1|Add1 ; no                     ;
+; matrix_cntr:p6|DEmux:p4|G[3]                        ; VCC                                   ; yes                    ;
+; matrix_cntr:p6|DEmux:p4|G[4]                        ; VCC                                   ; yes                    ;
+; matrix_cntr:p6|DEmux:p4|G[5]                        ; VCC                                   ; yes                    ;
+; matrix_cntr:p6|DEmux:p4|G[6]                        ; VCC                                   ; yes                    ;
+; matrix_cntr:p6|DEmux:p4|G[7]                        ; VCC                                   ; yes                    ;
+; matrix_cntr:p6|DEmux:p4|B[0]                        ; matrix_cntr:p6|DEmux:p4|B[7]          ; yes                    ;
+; matrix_cntr:p6|DEmux:p4|B[1]                        ; matrix_cntr:p6|DEmux:p4|B[7]          ; yes                    ;
+; matrix_cntr:p6|DEmux:p4|B[2]                        ; matrix_cntr:p6|DEmux:p4|B[7]          ; yes                    ;
+; matrix_cntr:p6|DEmux:p4|B[3]                        ; matrix_cntr:p6|DEmux:p4|B[7]          ; yes                    ;
+; matrix_cntr:p6|DEmux:p4|B[4]                        ; matrix_cntr:p6|DEmux:p4|B[7]          ; yes                    ;
+; matrix_cntr:p6|DEmux:p4|B[5]                        ; matrix_cntr:p6|DEmux:p4|B[7]          ; yes                    ;
+; matrix_cntr:p6|DEmux:p4|B[6]                        ; matrix_cntr:p6|DEmux:p4|B[7]          ; yes                    ;
+; matrix_cntr:p6|DEmux:p4|B[7]                        ; matrix_cntr:p6|DEmux:p4|B[7]          ; yes                    ;
+; Number of user-specified and inferred latches = 24  ;                                       ;                        ;
++-----------------------------------------------------+---------------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
-+-------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                  ;
-+--------------------------------------------+----------------------------------------+
-; Register name                              ; Reason for Removal                     ;
-+--------------------------------------------+----------------------------------------+
-; matrix_cntr:p6|binary_counter:p1|cnt[1..6] ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 6      ;                                        ;
-+--------------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -289,7 +295,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 26    ;
+; Total registers                              ; 29    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -323,8 +329,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------+----------+-----------------------------------------+
 ; Parameter Name ; Value    ; Type                                    ;
 +----------------+----------+-----------------------------------------+
-; INPUT_CLK      ; 50000000 ; Signed Integer                          ;
-; OUT_CLK        ; 2        ; Signed Integer                          ;
+; input_clk      ; 50000000 ; Signed Integer                          ;
+; out_clk        ; 15       ; Signed Integer                          ;
 +----------------+----------+-----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -488,7 +494,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -498,7 +504,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Nov 16 22:11:28 2019
+    Info: Processing started: Tue Nov 19 13:45:41 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off led -c led
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file frequency_converter.vhd
@@ -550,19 +556,10 @@ Info (12128): Elaborating entity "binary_counter" for hierarchy "matrix_cntr:p6|
 Warning (10492): VHDL Process Statement warning at binary_counter.vhd(35): signal "qq" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "simple_dual_port_ram_single_clock" for hierarchy "matrix_cntr:p6|simple_dual_port_ram_single_clock:p2"
 Info (12128): Elaborating entity "decode" for hierarchy "matrix_cntr:p6|decode:p3"
-Warning (10873): Using initial value X (don't care) for net "row_out[31..5]" at decode.vhd(11)
 Info (12128): Elaborating entity "DEmux" for hierarchy "matrix_cntr:p6|DEmux:p4"
 Warning (10631): VHDL Process Statement warning at DEmux.vhd(19): inferring latch(es) for signal or variable "R", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at DEmux.vhd(19): inferring latch(es) for signal or variable "G", which holds its previous value in one or more paths through the process
 Warning (10631): VHDL Process Statement warning at DEmux.vhd(19): inferring latch(es) for signal or variable "B", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "B[0]" at DEmux.vhd(19)
-Info (10041): Inferred latch for "B[1]" at DEmux.vhd(19)
-Info (10041): Inferred latch for "B[2]" at DEmux.vhd(19)
-Info (10041): Inferred latch for "B[3]" at DEmux.vhd(19)
-Info (10041): Inferred latch for "B[4]" at DEmux.vhd(19)
-Info (10041): Inferred latch for "B[5]" at DEmux.vhd(19)
-Info (10041): Inferred latch for "B[6]" at DEmux.vhd(19)
-Info (10041): Inferred latch for "B[7]" at DEmux.vhd(19)
+Warning (10631): VHDL Process Statement warning at DEmux.vhd(19): inferring latch(es) for signal or variable "G", which holds its previous value in one or more paths through the process
 Info (10041): Inferred latch for "G[0]" at DEmux.vhd(19)
 Info (10041): Inferred latch for "G[1]" at DEmux.vhd(19)
 Info (10041): Inferred latch for "G[2]" at DEmux.vhd(19)
@@ -571,6 +568,14 @@ Info (10041): Inferred latch for "G[4]" at DEmux.vhd(19)
 Info (10041): Inferred latch for "G[5]" at DEmux.vhd(19)
 Info (10041): Inferred latch for "G[6]" at DEmux.vhd(19)
 Info (10041): Inferred latch for "G[7]" at DEmux.vhd(19)
+Info (10041): Inferred latch for "B[0]" at DEmux.vhd(19)
+Info (10041): Inferred latch for "B[1]" at DEmux.vhd(19)
+Info (10041): Inferred latch for "B[2]" at DEmux.vhd(19)
+Info (10041): Inferred latch for "B[3]" at DEmux.vhd(19)
+Info (10041): Inferred latch for "B[4]" at DEmux.vhd(19)
+Info (10041): Inferred latch for "B[5]" at DEmux.vhd(19)
+Info (10041): Inferred latch for "B[6]" at DEmux.vhd(19)
+Info (10041): Inferred latch for "B[7]" at DEmux.vhd(19)
 Info (10041): Inferred latch for "R[0]" at DEmux.vhd(19)
 Info (10041): Inferred latch for "R[1]" at DEmux.vhd(19)
 Info (10041): Inferred latch for "R[2]" at DEmux.vhd(19)
@@ -579,38 +584,6 @@ Info (10041): Inferred latch for "R[4]" at DEmux.vhd(19)
 Info (10041): Inferred latch for "R[5]" at DEmux.vhd(19)
 Info (10041): Inferred latch for "R[6]" at DEmux.vhd(19)
 Info (10041): Inferred latch for "R[7]" at DEmux.vhd(19)
-Warning (14025): LATCH primitive "matrix_cntr:p6|DEmux:p4|B[1]" is permanently disabled
-Warning (14025): LATCH primitive "matrix_cntr:p6|DEmux:p4|B[0]" is permanently disabled
-Warning (14025): LATCH primitive "matrix_cntr:p6|DEmux:p4|B[3]" is permanently disabled
-Warning (14025): LATCH primitive "matrix_cntr:p6|DEmux:p4|B[2]" is permanently disabled
-Warning (14025): LATCH primitive "matrix_cntr:p6|DEmux:p4|B[4]" is permanently disabled
-Warning (14025): LATCH primitive "matrix_cntr:p6|DEmux:p4|B[5]" is permanently disabled
-Warning (14025): LATCH primitive "matrix_cntr:p6|DEmux:p4|B[6]" is permanently disabled
-Warning (14025): LATCH primitive "matrix_cntr:p6|DEmux:p4|B[7]" is permanently disabled
-Warning (14025): LATCH primitive "matrix_cntr:p6|DEmux:p4|G[0]" is permanently disabled
-Warning (14025): LATCH primitive "matrix_cntr:p6|DEmux:p4|G[1]" is permanently disabled
-Warning (14025): LATCH primitive "matrix_cntr:p6|DEmux:p4|G[2]" is permanently disabled
-Warning (14025): LATCH primitive "matrix_cntr:p6|DEmux:p4|G[3]" is permanently disabled
-Warning (14025): LATCH primitive "matrix_cntr:p6|DEmux:p4|G[4]" is permanently disabled
-Warning (14025): LATCH primitive "matrix_cntr:p6|DEmux:p4|G[5]" is permanently disabled
-Warning (14025): LATCH primitive "matrix_cntr:p6|DEmux:p4|G[6]" is permanently disabled
-Warning (14025): LATCH primitive "matrix_cntr:p6|DEmux:p4|G[7]" is permanently disabled
-Warning (14025): LATCH primitive "matrix_cntr:p6|DEmux:p4|B[1]" is permanently disabled
-Warning (14025): LATCH primitive "matrix_cntr:p6|DEmux:p4|B[0]" is permanently disabled
-Warning (14025): LATCH primitive "matrix_cntr:p6|DEmux:p4|B[3]" is permanently disabled
-Warning (14025): LATCH primitive "matrix_cntr:p6|DEmux:p4|B[2]" is permanently disabled
-Warning (14025): LATCH primitive "matrix_cntr:p6|DEmux:p4|B[4]" is permanently disabled
-Warning (14025): LATCH primitive "matrix_cntr:p6|DEmux:p4|B[5]" is permanently disabled
-Warning (14025): LATCH primitive "matrix_cntr:p6|DEmux:p4|B[6]" is permanently disabled
-Warning (14025): LATCH primitive "matrix_cntr:p6|DEmux:p4|B[7]" is permanently disabled
-Warning (14025): LATCH primitive "matrix_cntr:p6|DEmux:p4|G[0]" is permanently disabled
-Warning (14025): LATCH primitive "matrix_cntr:p6|DEmux:p4|G[1]" is permanently disabled
-Warning (14025): LATCH primitive "matrix_cntr:p6|DEmux:p4|G[2]" is permanently disabled
-Warning (14025): LATCH primitive "matrix_cntr:p6|DEmux:p4|G[3]" is permanently disabled
-Warning (14025): LATCH primitive "matrix_cntr:p6|DEmux:p4|G[4]" is permanently disabled
-Warning (14025): LATCH primitive "matrix_cntr:p6|DEmux:p4|G[5]" is permanently disabled
-Warning (14025): LATCH primitive "matrix_cntr:p6|DEmux:p4|G[6]" is permanently disabled
-Warning (14025): LATCH primitive "matrix_cntr:p6|DEmux:p4|G[7]" is permanently disabled
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276007): RAM logic "single_port_rom:p5|rom" is uninferred due to asynchronous read logic
 Info (19000): Inferred 1 megafunctions from design logic
@@ -639,69 +612,66 @@ Info (12133): Instantiated megafunction "matrix_cntr:p6|simple_dual_port_ram_sin
     Info (12134): Parameter "INIT_FILE" = "db/led.ram0_simple_dual_port_ram_single_clock_c2af7d2.hdl.mif"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_d191.tdf
     Info (12023): Found entity 1: altsyncram_d191
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "row_out[1]" is stuck at GND
-    Warning (13410): Pin "row_out[2]" is stuck at GND
-    Warning (13410): Pin "row_out[3]" is stuck at GND
-    Warning (13410): Pin "row_out[4]" is stuck at GND
-    Warning (13410): Pin "row_out[5]" is stuck at GND
-    Warning (13410): Pin "row_out[6]" is stuck at GND
-    Warning (13410): Pin "row_out[7]" is stuck at GND
-    Warning (13410): Pin "row_out[8]" is stuck at GND
-    Warning (13410): Pin "row_out[9]" is stuck at GND
-    Warning (13410): Pin "row_out[10]" is stuck at GND
-    Warning (13410): Pin "row_out[11]" is stuck at GND
-    Warning (13410): Pin "row_out[12]" is stuck at GND
-    Warning (13410): Pin "row_out[13]" is stuck at GND
-    Warning (13410): Pin "row_out[14]" is stuck at GND
-    Warning (13410): Pin "row_out[15]" is stuck at GND
-    Warning (13410): Pin "row_out[16]" is stuck at GND
-    Warning (13410): Pin "row_out[17]" is stuck at GND
-    Warning (13410): Pin "row_out[18]" is stuck at GND
-    Warning (13410): Pin "row_out[19]" is stuck at GND
-    Warning (13410): Pin "row_out[20]" is stuck at GND
-    Warning (13410): Pin "row_out[21]" is stuck at GND
-    Warning (13410): Pin "row_out[22]" is stuck at GND
-    Warning (13410): Pin "row_out[23]" is stuck at GND
-    Warning (13410): Pin "row_out[24]" is stuck at GND
-    Warning (13410): Pin "row_out[25]" is stuck at GND
-    Warning (13410): Pin "row_out[26]" is stuck at GND
-    Warning (13410): Pin "row_out[27]" is stuck at GND
-    Warning (13410): Pin "row_out[28]" is stuck at GND
-    Warning (13410): Pin "row_out[29]" is stuck at GND
-    Warning (13410): Pin "row_out[30]" is stuck at GND
-    Warning (13410): Pin "row_out[31]" is stuck at GND
-    Warning (13410): Pin "nG[0]" is stuck at VCC
-    Warning (13410): Pin "nG[1]" is stuck at VCC
-    Warning (13410): Pin "nG[2]" is stuck at VCC
-    Warning (13410): Pin "nG[3]" is stuck at VCC
-    Warning (13410): Pin "nG[4]" is stuck at VCC
-    Warning (13410): Pin "nG[5]" is stuck at VCC
-    Warning (13410): Pin "nG[6]" is stuck at VCC
-    Warning (13410): Pin "nG[7]" is stuck at VCC
-    Warning (13410): Pin "nB[0]" is stuck at VCC
-    Warning (13410): Pin "nB[1]" is stuck at VCC
-    Warning (13410): Pin "nB[2]" is stuck at VCC
-    Warning (13410): Pin "nB[3]" is stuck at VCC
-    Warning (13410): Pin "nB[4]" is stuck at VCC
-    Warning (13410): Pin "nB[5]" is stuck at VCC
-    Warning (13410): Pin "nB[6]" is stuck at VCC
-    Warning (13410): Pin "nB[7]" is stuck at VCC
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "matrix_cntr:p6|simple_dual_port_ram_single_clock:p2|altsyncram:ram_rtl_0|altsyncram_d191:auto_generated|ALTSYNCRAM"
+Warning (13012): Latch matrix_cntr:p6|DEmux:p4|R[0] has unsafe behavior
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal matrix_cntr:p6|binary_counter:p1|Add1~synth
+Warning (13012): Latch matrix_cntr:p6|DEmux:p4|R[1] has unsafe behavior
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal matrix_cntr:p6|binary_counter:p1|Add1~synth
+Warning (13012): Latch matrix_cntr:p6|DEmux:p4|R[2] has unsafe behavior
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal matrix_cntr:p6|binary_counter:p1|Add1~synth
+Warning (13012): Latch matrix_cntr:p6|DEmux:p4|R[3] has unsafe behavior
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal matrix_cntr:p6|binary_counter:p1|Add1~synth
+Warning (13012): Latch matrix_cntr:p6|DEmux:p4|R[4] has unsafe behavior
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal matrix_cntr:p6|binary_counter:p1|Add1~synth
+Warning (13012): Latch matrix_cntr:p6|DEmux:p4|R[5] has unsafe behavior
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal matrix_cntr:p6|binary_counter:p1|Add1~synth
+Warning (13012): Latch matrix_cntr:p6|DEmux:p4|R[6] has unsafe behavior
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal matrix_cntr:p6|binary_counter:p1|Add1~synth
+Warning (13012): Latch matrix_cntr:p6|DEmux:p4|R[7] has unsafe behavior
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal matrix_cntr:p6|binary_counter:p1|Add1~synth
+Warning (13012): Latch matrix_cntr:p6|DEmux:p4|G[0] has unsafe behavior
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal matrix_cntr:p6|binary_counter:p1|Add1~synth
+Warning (13012): Latch matrix_cntr:p6|DEmux:p4|G[1] has unsafe behavior
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal matrix_cntr:p6|binary_counter:p1|Add1~synth
+Warning (13012): Latch matrix_cntr:p6|DEmux:p4|G[2] has unsafe behavior
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal matrix_cntr:p6|binary_counter:p1|Add1~synth
+Warning (13012): Latch matrix_cntr:p6|DEmux:p4|B[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal matrix_cntr:p6|binary_counter:p1|Add1~synth
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal matrix_cntr:p6|binary_counter:p1|Add1~synth
+Warning (13012): Latch matrix_cntr:p6|DEmux:p4|B[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal matrix_cntr:p6|binary_counter:p1|Add1~synth
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal matrix_cntr:p6|binary_counter:p1|Add1~synth
+Warning (13012): Latch matrix_cntr:p6|DEmux:p4|B[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal matrix_cntr:p6|binary_counter:p1|Add1~synth
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal matrix_cntr:p6|binary_counter:p1|Add1~synth
+Warning (13012): Latch matrix_cntr:p6|DEmux:p4|B[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal matrix_cntr:p6|binary_counter:p1|Add1~synth
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal matrix_cntr:p6|binary_counter:p1|Add1~synth
+Warning (13012): Latch matrix_cntr:p6|DEmux:p4|B[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal matrix_cntr:p6|binary_counter:p1|Add1~synth
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal matrix_cntr:p6|binary_counter:p1|Add1~synth
+Warning (13012): Latch matrix_cntr:p6|DEmux:p4|B[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal matrix_cntr:p6|binary_counter:p1|Add1~synth
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal matrix_cntr:p6|binary_counter:p1|Add1~synth
+Warning (13012): Latch matrix_cntr:p6|DEmux:p4|B[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal matrix_cntr:p6|binary_counter:p1|Add1~synth
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal matrix_cntr:p6|binary_counter:p1|Add1~synth
+Warning (13012): Latch matrix_cntr:p6|DEmux:p4|B[7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal matrix_cntr:p6|binary_counter:p1|Add1~synth
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal matrix_cntr:p6|binary_counter:p1|Add1~synth
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "b_on_off_in"
     Warning (15610): No output dependent on input pin "b_swich_in"
-Info (21057): Implemented 120 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 196 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 56 output pins
-    Info (21061): Implemented 53 logic cells
+    Info (21059): Implemented 57 output pins
+    Info (21061): Implemented 128 logic cells
     Info (21064): Implemented 8 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 94 warnings
-    Info: Peak virtual memory: 4654 megabytes
-    Info: Processing ended: Sat Nov 16 22:11:34 2019
-    Info: Elapsed time: 00:00:06
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 59 warnings
+    Info: Peak virtual memory: 4650 megabytes
+    Info: Processing ended: Tue Nov 19 13:45:49 2019
+    Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:05
 
 
