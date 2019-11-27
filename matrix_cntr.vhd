@@ -80,8 +80,8 @@ begin
 	p1 : binary_counter port map(clk => clk, addr => addr, q => q);
 	p2 : simple_dual_port_ram_single_clock port map(clk => clk, raddr => q, data => data,we => '0', waddr => waddr, q => dataR);
 
-	sel   <= addr(1 downto 0);
-	dataD <= addr(6 downto 2);
+	sel   <= addr(6 downto 5);
+	dataD <= addr(4 downto 0);
 
 	p3 : decode port map(row_in => dataD, row_out => row_out);
 	p4 : DEmux port map(R => R, G => G, B => B, sel => sel, data => dataR);

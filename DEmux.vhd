@@ -19,24 +19,27 @@ begin
 	process(data, sel)
 	begin
 		if sel = "00" then
-			R <= data;
-		   B <= "00000000";
+			B <= "00000000";
 			G <= "00000000";
+			R <= data;
+
 		end if;
 		if sel = "01" then
-			G <= data;
 			B <= "00000000";
 			R <= "00000000";
+			G <= data;
+
 		end if;
 		if sel = "10" then
-			B <= data;
 			R <= "00000000";
 			G <= "00000000";
+			B <= data;
+
 		end if;
 		if sel = "11" then
-			R <= "11000000";
-			B <= "00111000";
-			G <= "00000111";
+			R <= "00000000";
+			B <= "00000000";
+			G <= "00000000";
 		end if;
 	end process;
 end rtl;

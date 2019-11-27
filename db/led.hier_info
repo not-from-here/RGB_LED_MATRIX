@@ -1,17 +1,104 @@
-|single_port_rom
-clk => q[0]~reg0.CLK
-clk => q[1]~reg0.CLK
-clk => q[2]~reg0.CLK
-addr[0] => rom.RADDR
-addr[1] => rom.RADDR1
-addr[2] => rom.RADDR2
-addr[3] => rom.RADDR3
-addr[4] => rom.RADDR4
-addr[5] => rom.RADDR5
-addr[6] => rom.RADDR6
-addr[7] => rom.RADDR7
-q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+|matrix_block
+clk => frequency_converter:p1.clk_in
+b_on_off_in => button_cntr:p2.on_off_in
+b_swich_in => button_cntr:p2.swich_in
+row_out[0] <= row_out[0].DB_MAX_OUTPUT_PORT_TYPE
+row_out[1] <= row_out[1].DB_MAX_OUTPUT_PORT_TYPE
+row_out[2] <= row_out[2].DB_MAX_OUTPUT_PORT_TYPE
+row_out[3] <= row_out[3].DB_MAX_OUTPUT_PORT_TYPE
+row_out[4] <= row_out[4].DB_MAX_OUTPUT_PORT_TYPE
+row_out[5] <= row_out[5].DB_MAX_OUTPUT_PORT_TYPE
+row_out[6] <= row_out[6].DB_MAX_OUTPUT_PORT_TYPE
+row_out[7] <= row_out[7].DB_MAX_OUTPUT_PORT_TYPE
+row_out[8] <= row_out[8].DB_MAX_OUTPUT_PORT_TYPE
+row_out[9] <= row_out[9].DB_MAX_OUTPUT_PORT_TYPE
+row_out[10] <= row_out[10].DB_MAX_OUTPUT_PORT_TYPE
+row_out[11] <= row_out[11].DB_MAX_OUTPUT_PORT_TYPE
+row_out[12] <= row_out[12].DB_MAX_OUTPUT_PORT_TYPE
+row_out[13] <= row_out[13].DB_MAX_OUTPUT_PORT_TYPE
+row_out[14] <= row_out[14].DB_MAX_OUTPUT_PORT_TYPE
+row_out[15] <= row_out[15].DB_MAX_OUTPUT_PORT_TYPE
+row_out[16] <= row_out[16].DB_MAX_OUTPUT_PORT_TYPE
+row_out[17] <= row_out[17].DB_MAX_OUTPUT_PORT_TYPE
+row_out[18] <= row_out[18].DB_MAX_OUTPUT_PORT_TYPE
+row_out[19] <= row_out[19].DB_MAX_OUTPUT_PORT_TYPE
+row_out[20] <= row_out[20].DB_MAX_OUTPUT_PORT_TYPE
+row_out[21] <= row_out[21].DB_MAX_OUTPUT_PORT_TYPE
+row_out[22] <= row_out[22].DB_MAX_OUTPUT_PORT_TYPE
+row_out[23] <= row_out[23].DB_MAX_OUTPUT_PORT_TYPE
+row_out[24] <= row_out[24].DB_MAX_OUTPUT_PORT_TYPE
+row_out[25] <= row_out[25].DB_MAX_OUTPUT_PORT_TYPE
+row_out[26] <= row_out[26].DB_MAX_OUTPUT_PORT_TYPE
+row_out[27] <= row_out[27].DB_MAX_OUTPUT_PORT_TYPE
+row_out[28] <= row_out[28].DB_MAX_OUTPUT_PORT_TYPE
+row_out[29] <= row_out[29].DB_MAX_OUTPUT_PORT_TYPE
+row_out[30] <= row_out[30].DB_MAX_OUTPUT_PORT_TYPE
+row_out[31] <= row_out[31].DB_MAX_OUTPUT_PORT_TYPE
+nR[0] <= nR[0].DB_MAX_OUTPUT_PORT_TYPE
+nR[1] <= nR[1].DB_MAX_OUTPUT_PORT_TYPE
+nR[2] <= nR[2].DB_MAX_OUTPUT_PORT_TYPE
+nR[3] <= nR[3].DB_MAX_OUTPUT_PORT_TYPE
+nR[4] <= nR[4].DB_MAX_OUTPUT_PORT_TYPE
+nR[5] <= nR[5].DB_MAX_OUTPUT_PORT_TYPE
+nR[6] <= nR[6].DB_MAX_OUTPUT_PORT_TYPE
+nR[7] <= nR[7].DB_MAX_OUTPUT_PORT_TYPE
+nG[0] <= nG[0].DB_MAX_OUTPUT_PORT_TYPE
+nG[1] <= nG[1].DB_MAX_OUTPUT_PORT_TYPE
+nG[2] <= nG[2].DB_MAX_OUTPUT_PORT_TYPE
+nG[3] <= nG[3].DB_MAX_OUTPUT_PORT_TYPE
+nG[4] <= nG[4].DB_MAX_OUTPUT_PORT_TYPE
+nG[5] <= nG[5].DB_MAX_OUTPUT_PORT_TYPE
+nG[6] <= nG[6].DB_MAX_OUTPUT_PORT_TYPE
+nG[7] <= nG[7].DB_MAX_OUTPUT_PORT_TYPE
+clkX <= frequency_converter:p1.clk_out
+nB[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+nB[1] <= nB[1].DB_MAX_OUTPUT_PORT_TYPE
+nB[2] <= nB[2].DB_MAX_OUTPUT_PORT_TYPE
+nB[3] <= nB[3].DB_MAX_OUTPUT_PORT_TYPE
+nB[4] <= nB[4].DB_MAX_OUTPUT_PORT_TYPE
+nB[5] <= nB[5].DB_MAX_OUTPUT_PORT_TYPE
+nB[6] <= nB[6].DB_MAX_OUTPUT_PORT_TYPE
+nB[7] <= nB[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|matrix_block|frequency_converter:p1
+clk_in => temporal.CLK
+clk_in => \frequency_divider:counter[0].CLK
+clk_in => \frequency_divider:counter[1].CLK
+clk_in => \frequency_divider:counter[2].CLK
+clk_in => \frequency_divider:counter[3].CLK
+clk_in => \frequency_divider:counter[4].CLK
+clk_in => \frequency_divider:counter[5].CLK
+clk_in => \frequency_divider:counter[6].CLK
+clk_in => \frequency_divider:counter[7].CLK
+clk_in => \frequency_divider:counter[8].CLK
+clk_in => \frequency_divider:counter[9].CLK
+clk_in => \frequency_divider:counter[10].CLK
+clk_in => \frequency_divider:counter[11].CLK
+clk_in => \frequency_divider:counter[12].CLK
+clk_in => \frequency_divider:counter[13].CLK
+clk_in => \frequency_divider:counter[14].CLK
+clk_in => \frequency_divider:counter[15].CLK
+clk_in => \frequency_divider:counter[16].CLK
+clk_in => \frequency_divider:counter[17].CLK
+clk_in => \frequency_divider:counter[18].CLK
+clk_in => \frequency_divider:counter[19].CLK
+clk_in => \frequency_divider:counter[20].CLK
+clk_out <= temporal.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|matrix_block|button_cntr:p2
+clk => ~NO_FANOUT~
+on_off_in => ~NO_FANOUT~
+swich_in => ~NO_FANOUT~
+on_off_out <= on_off_out.DB_MAX_OUTPUT_PORT_TYPE
+swich_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|matrix_block|main_block:p3
+clk => ~NO_FANOUT~
+on_off_out => ~NO_FANOUT~
+swich_out => ~NO_FANOUT~
+smth <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 

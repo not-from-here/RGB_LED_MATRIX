@@ -18,13 +18,19 @@ architecture rtl of matrix_block is
 	------------------------------------------------------
 	component printer is
 		generic(
-			ADDR_WIDTH : natural := 7
-		);
-		port(clk   : in  std_logic;
-		     smth  : in  std_logic;
-		     addr  : out natural range 0 to 2**ADDR_WIDTH - 1;
-		     waddr : out natural range 0 to 2**ADDR_WIDTH - 1
-		    );
+		DATA_WIDTH_ROM : natural := 3 * 8;
+		ADDR_WIDTH_ROM : natural := 5;
+		DATA_WIDTH_RAM : natural := 8;
+		ADDR_WIDTH_RAM : natural := 7
+	);
+	port(
+		clk         : in  std_logic;
+		smth        : in  std_logic;
+		data_f_rom  : in  std_logic_vector((DATA_WIDTH_ROM - 1) downto 0);
+		data_t_ram  : out std_logic_vector((DATA_WIDTH_RAM - 1) downto 0);
+		addr_f_rom  : out natural range 0 to 2**ADDR_WIDTH_ROM - 1; -- 0 -> 31
+		waddr_t_ram : out natural range 0 to 2**ADDR_WIDTH_RAM - 1 -- 0 -> 127
+	);
 	end component printer;
 	------------------------------------------------------
 	component frequency_converter is
@@ -51,8 +57,8 @@ architecture rtl of matrix_block is
 	component single_port_rom is
 
 		generic(
-			DATA_WIDTH : natural := 8;
-			ADDR_WIDTH : natural := 7
+			DATA_WIDTH : natural := 3*8;
+			ADDR_WIDTH : natural := 5
 		);
 
 		port(
@@ -95,6 +101,7 @@ architecture rtl of matrix_block is
 	signal addr       : natural range 0 to 2**7 - 1;
 	signal waddr      : natural range 0 to 2**7 - 1;
 	signal q          : std_logic_vector(7 downto 0);
+	signal q_f_rom    : std_logic_vector(7 downto 0);
 	signal R, G, B    : STD_LOGIC_VECTOR(7 DOWNTO 0);
 begin
 	nR <= not (R);
@@ -103,8 +110,9 @@ begin
 	p1 : frequency_converter port map(clk_in => clk, clk_out => clk_out_x);
 	p2 : button_cntr port map(clk => clk_out_x, on_off_in => b_on_off_in, swich_in => b_swich_in, swich_out => swich_out, on_off_out => on_off_out);
 	p3 : main_block port map(clk => clk_out_x, on_off_out => on_off_out, swich_out => swich_out, smth => smth);
-	p4 : printer port map(clk => clk_out_x, smth => smth, addr => addr, waddr => waddr);
-	p5 : single_port_rom port map(clk => clk_out_x, q => q, addr => addr);
-	p6 : matrix_cntr port map(clk => clk_out_x, row_out => row_out, R => R, B => B, G => G, waddr => waddr, data => q);
+	--p4 : printer port map(clk => clk_out_x, smth => smth, addr_f_rom => addr,  );
+	--p5 : single_port_rom port map(clk => clk_out_x, q => q, addr => addr);
+	--p6 : matrix_cntr port map(clk => clk_out_x, row_out => row_out, R => R, B => B, G => G, waddr => waddr, data => q);
 	clkX <= clk_out_x;
 end rtl;
+		

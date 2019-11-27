@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone II"
 set_global_assignment -name DEVICE EP2C35F672C6
-set_global_assignment -name TOP_LEVEL_ENTITY single_port_rom
+set_global_assignment -name TOP_LEVEL_ENTITY matrix_block
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:20:26  SEPTEMBER 24, 2019"
 set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
