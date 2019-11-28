@@ -12,6 +12,7 @@ entity printer is
 		clk         : in  std_logic;
 		smth        : in  std_logic;
 		data_f_rom  : in  std_logic_vector((DATA_WIDTH_ROM - 1) downto 0);
+		we				: out std_logic;
 		data_t_ram  : out std_logic_vector((DATA_WIDTH_RAM - 1) downto 0);
 		addr_f_rom  : out natural range 0 to 2**ADDR_WIDTH_ROM - 1; -- 0 -> 31
 		waddr_t_ram : out natural range 0 to 2**ADDR_WIDTH_RAM - 1 -- 0 -> 127

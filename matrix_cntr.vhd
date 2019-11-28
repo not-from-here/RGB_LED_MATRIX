@@ -8,6 +8,7 @@ entity matrix_cntr is
 	);
 	port(
 		clk     : in  std_logic;
+		we		  : in  std_logic;
 		waddr   : in  natural range 0 to 2**ADDR_WIDTH - 1;
 		data    : in  std_logic_vector((DATA_WIDTH - 1) downto 0);
 		row_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -31,7 +32,7 @@ component simple_dual_port_ram_single_clock is
 		raddr : in  natural range 0 to 2**ADDR_WIDTH - 1;
 		waddr : in  natural range 0 to 2**ADDR_WIDTH - 1;
 		data  : in  std_logic_vector((DATA_WIDTH - 1) downto 0);
-		we		: in std_logic := '1';
+		we		: in  std_logic; --:= '1'
 		q     : out std_logic_vector((DATA_WIDTH - 1) downto 0)
 	);
 
@@ -78,7 +79,7 @@ end component DEmux;
 	signal dataR : STD_LOGIC_VECTOR(7 DOWNTO 0);
 begin
 	p1 : binary_counter port map(clk => clk, addr => addr, q => q);
-	p2 : simple_dual_port_ram_single_clock port map(clk => clk, raddr => q, data => data,we => '0', waddr => waddr, q => dataR);
+	p2 : simple_dual_port_ram_single_clock port map(clk => clk, raddr => q, data => data, we => we, waddr => waddr, q => dataR);
 
 	sel   <= addr(6 downto 5);
 	dataD <= addr(4 downto 0);

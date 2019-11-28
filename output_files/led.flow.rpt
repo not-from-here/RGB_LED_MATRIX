@@ -1,5 +1,5 @@
 Flow report for led
-Wed Nov 27 22:34:53 2019
+Thu Nov 28 20:22:48 2019
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,20 +40,20 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Wed Nov 27 22:34:53 2019           ;
+; Flow Status                        ; Successful - Thu Nov 28 20:22:48 2019           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; led                                             ;
 ; Top-level Entity Name              ; matrix_block                                    ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C35F672C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 40 / 33,216 ( < 1 % )                           ;
-;     Total combinational functions  ; 40 / 33,216 ( < 1 % )                           ;
-;     Dedicated logic registers      ; 22 / 33,216 ( < 1 % )                           ;
-; Total registers                    ; 22                                              ;
+; Total logic elements               ; 117 / 33,216 ( < 1 % )                          ;
+;     Total combinational functions  ; 117 / 33,216 ( < 1 % )                          ;
+;     Dedicated logic registers      ; 29 / 33,216 ( < 1 % )                           ;
+; Total registers                    ; 29                                              ;
 ; Total pins                         ; 60 / 475 ( 13 % )                               ;
 ; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0 / 483,840 ( 0 % )                             ;
+; Total memory bits                  ; 1,024 / 483,840 ( < 1 % )                       ;
 ; Embedded Multiplier 9-bit elements ; 0 / 70 ( 0 % )                                  ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                                   ;
 +------------------------------------+-------------------------------------------------+
@@ -64,28 +64,28 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/27/2019 22:34:19 ;
+; Start date & time ; 11/28/2019 20:22:18 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; led                 ;
 +-------------------+---------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                     ;
-+-------------------------------------+--------------------------------+---------------+--------------+----------------+
-; Assignment Name                     ; Value                          ; Default Value ; Entity Name  ; Section Id     ;
-+-------------------------------------+--------------------------------+---------------+--------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 93328248603001.157488685917604 ; --            ; --           ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                           ; --            ; --           ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)         ; <None>        ; --           ; --             ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                             ; --            ; --           ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                              ; --            ; --           ; --             ;
-; PARTITION_COLOR                     ; 16764057                       ; --            ; matrix_block ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING          ; --            ; matrix_block ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                         ; --            ; matrix_block ; Top            ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                   ; --            ; --           ; --             ;
-; TOP_LEVEL_ENTITY                    ; matrix_block                   ; led           ; --           ; --             ;
-+-------------------------------------+--------------------------------+---------------+--------------+----------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                      ;
++-------------------------------------+---------------------------------+---------------+--------------+----------------+
+; Assignment Name                     ; Value                           ; Default Value ; Entity Name  ; Section Id     ;
++-------------------------------------+---------------------------------+---------------+--------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 220167884995020.157496533802376 ; --            ; --           ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                            ; --            ; --           ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)          ; <None>        ; --           ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --           ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                               ; --            ; --           ; --             ;
+; PARTITION_COLOR                     ; 16764057                        ; --            ; matrix_block ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --            ; matrix_block ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --            ; matrix_block ; Top            ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                    ; --            ; --           ; --             ;
+; TOP_LEVEL_ENTITY                    ; matrix_block                    ; led           ; --           ; --             ;
++-------------------------------------+---------------------------------+---------------+--------------+----------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -93,12 +93,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:04     ; 1.0                     ; 4642 MB             ; 00:00:04                           ;
-; Fitter                    ; 00:00:14     ; 1.0                     ; 4884 MB             ; 00:00:12                           ;
-; Assembler                 ; 00:00:05     ; 1.0                     ; 4568 MB             ; 00:00:04                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 4543 MB             ; 00:00:02                           ;
+; Analysis & Synthesis      ; 00:00:04     ; 1.0                     ; 4650 MB             ; 00:00:04                           ;
+; Fitter                    ; 00:00:13     ; 1.0                     ; 4889 MB             ; 00:00:12                           ;
+; Assembler                 ; 00:00:04     ; 1.0                     ; 4567 MB             ; 00:00:04                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 4558 MB             ; 00:00:02                           ;
 ; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4515 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:28     ; --                      ; --                  ; 00:00:23                           ;
+; Total                     ; 00:00:25     ; --                      ; --                  ; 00:00:23                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

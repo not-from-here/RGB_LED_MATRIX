@@ -38,6 +38,7 @@ architecture rtl of simple_dual_port_ram_single_clock is
 	                          "11100000",
 	                          "00011000",
 	                          "00011000",
+									  
 	                          "11000000",
 	                          "00000011",
 	                          "11000000",
@@ -46,6 +47,7 @@ architecture rtl of simple_dual_port_ram_single_clock is
 	                          "00000100",
 	                          "00010000",
 	                          "01000000",
+									  
 	                          "00110000",
 	                          "00001100",
 	                          "00110000",
@@ -54,6 +56,7 @@ architecture rtl of simple_dual_port_ram_single_clock is
 	                          "00000000",
 	                          "00000000",
 	                          "00000000",
+									  
 	                          "00011000",
 	                          "00000100",
 	                          "00001000",
@@ -62,6 +65,7 @@ architecture rtl of simple_dual_port_ram_single_clock is
 	                          "00000000",
 	                          "00000000",
 	                          "00000001",
+									  
 	                          "11111111", -- R0
 	                          "01111111",
 	                          "00111111",
@@ -70,6 +74,7 @@ architecture rtl of simple_dual_port_ram_single_clock is
 	                          "00000111",
 	                          "00000011",
 	                          "00000001",
+									  
 	                          "10100000", -- R1
 	                          "01010000",
 	                          "00101000",
@@ -78,6 +83,7 @@ architecture rtl of simple_dual_port_ram_single_clock is
 	                          "00100101",
 	                          "01000010",
 	                          "10000001",
+									  
 	                          "10101000", -- R2
 	                          "01010100",
 	                          "00101010",
@@ -86,6 +92,7 @@ architecture rtl of simple_dual_port_ram_single_clock is
 	                          "00000101",
 	                          "00000010",
 	                          "10000001",
+									  
 	                          "10101010", -- R3
 	                          "01010101",
 	                          "00101010",
@@ -94,6 +101,7 @@ architecture rtl of simple_dual_port_ram_single_clock is
 	                          "00000101",
 	                          "00000010",
 	                          "10000001",
+									  
 	                          "11111111", -- G0
 	                          "01000000",
 	                          "00100000",
@@ -102,6 +110,7 @@ architecture rtl of simple_dual_port_ram_single_clock is
 	                          "00000100",
 	                          "00000010",
 	                          "00000001",
+									  
 	                          "10100000", -- G1
 	                          "11010000",
 	                          "01100000",
@@ -110,6 +119,7 @@ architecture rtl of simple_dual_port_ram_single_clock is
 	                          "00001100",
 	                          "00000110",
 	                          "00000011",
+									  
 	                          "10100000", -- G2
 	                          "11010000",
 	                          "11100000",
@@ -118,6 +128,7 @@ architecture rtl of simple_dual_port_ram_single_clock is
 	                          "00011100",
 	                          "00001110",
 	                          "00000111",
+									  
 	                          "10000000", -- G3
 	                          "01000000",
 	                          "00100000",
@@ -126,6 +137,7 @@ architecture rtl of simple_dual_port_ram_single_clock is
 	                          "00000100",
 	                          "00000010",
 	                          "00000000",
+									  
 	                          "11111111", -- B0
 	                          "01000000",
 	                          "11111111",
@@ -134,6 +146,7 @@ architecture rtl of simple_dual_port_ram_single_clock is
 	                          "00000100",
 	                          "11111111",
 	                          "00000001",
+									  
 	                          "11111111", -- B1
 	                          "11111111",
 	                          "00100000",
@@ -142,6 +155,7 @@ architecture rtl of simple_dual_port_ram_single_clock is
 	                          "00000100",
 	                          "00000010",
 	                          "00000000",
+									  
 	                          "11111111", -- B2
 	                          "11111111",
 	                          "11111111",
@@ -168,7 +182,6 @@ begin
 			if (we = '1') then
 				ram(waddr) <= data;
 			end if;
-
 			-- On a read during a write to the same address, the read will
 			-- return the OLD data at the address
 			q <= ram(raddr);
