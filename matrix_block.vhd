@@ -80,6 +80,8 @@ architecture rtl of matrix_block is
 	------------------------------------------------------
 	component printer is
 		generic(
+			MIN_COUNT 		: natural := 0;
+			MAX_COUNT 		: natural := 31;
 			DATA_WIDTH_ROM : natural := 3 * 8;
 			ADDR_WIDTH_ROM : natural := 5;
 			DATA_WIDTH_RAM : natural := 8;

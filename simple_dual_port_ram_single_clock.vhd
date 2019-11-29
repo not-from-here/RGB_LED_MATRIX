@@ -30,7 +30,7 @@ architecture rtl of simple_dual_port_ram_single_clock is
 	type memory_t is array (0 to 2**ADDR_WIDTH - 1) of word_t;
 
 	-- Declare the RAM signal.	
-	signal ram : memory_t := ("00011000", -- A0
+	signal ram : memory_t := ("00011000", -- R0
 	                          "00011000",
 	                          "00011000",
 	                          "00011000",
@@ -39,7 +39,7 @@ architecture rtl of simple_dual_port_ram_single_clock is
 	                          "00011000",
 	                          "00011000",
 									  
-	                          "11000000",
+	                          "11000000", --R1
 	                          "00000011",
 	                          "11000000",
 	                          "00000011",
@@ -48,7 +48,7 @@ architecture rtl of simple_dual_port_ram_single_clock is
 	                          "00010000",
 	                          "01000000",
 									  
-	                          "00110000",
+	                          "00110000", --R2
 	                          "00001100",
 	                          "00110000",
 	                          "00001100",
@@ -57,7 +57,7 @@ architecture rtl of simple_dual_port_ram_single_clock is
 	                          "00000000",
 	                          "00000000",
 									  
-	                          "00011000",
+	                          "00011000", --R3
 	                          "00000100",
 	                          "00001000",
 	                          "00100000",
@@ -65,8 +65,8 @@ architecture rtl of simple_dual_port_ram_single_clock is
 	                          "00000000",
 	                          "00000000",
 	                          "00000001",
-									  
-	                          "11111111", -- R0
+									  --32
+	                          "11111111", --G0
 	                          "01111111",
 	                          "00111111",
 	                          "00011111",
@@ -75,7 +75,7 @@ architecture rtl of simple_dual_port_ram_single_clock is
 	                          "00000011",
 	                          "00000001",
 									  
-	                          "10100000", -- R1
+	                          "10100000", --G1
 	                          "01010000",
 	                          "00101000",
 	                          "00010100",
@@ -84,7 +84,7 @@ architecture rtl of simple_dual_port_ram_single_clock is
 	                          "01000010",
 	                          "10000001",
 									  
-	                          "10101000", -- R2
+	                          "10101000", --G2
 	                          "01010100",
 	                          "00101010",
 	                          "00010101",
@@ -93,7 +93,7 @@ architecture rtl of simple_dual_port_ram_single_clock is
 	                          "00000010",
 	                          "10000001",
 									  
-	                          "10101010", -- R3
+	                          "10101010", --G3
 	                          "01010101",
 	                          "00101010",
 	                          "00010101",
@@ -101,8 +101,8 @@ architecture rtl of simple_dual_port_ram_single_clock is
 	                          "00000101",
 	                          "00000010",
 	                          "10000001",
-									  
-	                          "11111111", -- G0
+									  --64
+	                          "11111111", --B0
 	                          "01000000",
 	                          "00100000",
 	                          "00010000",
@@ -111,7 +111,7 @@ architecture rtl of simple_dual_port_ram_single_clock is
 	                          "00000010",
 	                          "00000001",
 									  
-	                          "10100000", -- G1
+	                          "10100000", --B1
 	                          "11010000",
 	                          "01100000",
 	                          "00110000",
@@ -120,7 +120,7 @@ architecture rtl of simple_dual_port_ram_single_clock is
 	                          "00000110",
 	                          "00000011",
 									  
-	                          "10100000", -- G2
+	                          "10100000", --B2
 	                          "11010000",
 	                          "11100000",
 	                          "01110000",
@@ -129,7 +129,7 @@ architecture rtl of simple_dual_port_ram_single_clock is
 	                          "00001110",
 	                          "00000111",
 									  
-	                          "10000000", -- G3
+	                          "10000000", --B3
 	                          "01000000",
 	                          "00100000",
 	                          "00010000",
@@ -137,8 +137,8 @@ architecture rtl of simple_dual_port_ram_single_clock is
 	                          "00000100",
 	                          "00000010",
 	                          "00000000",
-									  
-	                          "11111111", -- B0
+									  --96
+	                          "11111111", -- A0
 	                          "01000000",
 	                          "11111111",
 	                          "00010000",
@@ -147,7 +147,7 @@ architecture rtl of simple_dual_port_ram_single_clock is
 	                          "11111111",
 	                          "00000001",
 									  
-	                          "11111111", -- B1
+	                          "11111111", 
 	                          "11111111",
 	                          "00100000",
 	                          "11111111",
@@ -156,23 +156,23 @@ architecture rtl of simple_dual_port_ram_single_clock is
 	                          "00000010",
 	                          "00000000",
 									  
-	                          "11111111", -- B2
+	                          "11111111", 
 	                          "11111111",
 	                          "11111111",
 	                          "00010000",
 	                          "00001000",
 	                          "00000100",
 	                          "00000010",
-	                          "00000001", --R1	
+	                          "00000001", 
 
-	                          "11111111", -- B3 
+	                          "11111111", 
 	                          "11111111",
 	                          "11111111",
 	                          "11111111",
 	                          "11111111",
 	                          "00000100",
 	                          "00000010",
-	                          "00000000" --R0								  
+	                          "00000000" 						  
 	                         );
 
 begin
