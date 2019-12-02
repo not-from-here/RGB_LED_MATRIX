@@ -32,7 +32,7 @@ component simple_dual_port_ram_single_clock is
 		raddr : in  natural range 0 to 2**ADDR_WIDTH - 1;
 		waddr : in  natural range 0 to 2**ADDR_WIDTH - 1;
 		data  : in  std_logic_vector((DATA_WIDTH - 1) downto 0);
-		we		: in  std_logic; --:= '1'
+		we		: in  std_logic; 
 		q     : out std_logic_vector((DATA_WIDTH - 1) downto 0)
 	);
 

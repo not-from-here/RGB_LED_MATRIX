@@ -24,7 +24,7 @@ architecture logic of frequency_converter is
 begin
 
 	frequency_divider : process(clk_in)
-		constant max_counter_v : natural := (INPUT_CLK / (OUT_CLK * 2)) - 1;
+		constant max_counter_v : natural                          := (INPUT_CLK / (OUT_CLK * 2)) - 1;
 		variable counter       : natural range 0 to max_counter_v := 0;
 	begin
 		if rising_edge(clk_in) then

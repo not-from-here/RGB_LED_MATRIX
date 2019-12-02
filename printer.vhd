@@ -33,12 +33,12 @@ architecture rtl of printer is
 	signal d_f_r : std_logic_vector((DATA_WIDTH_ROM - 1) downto 0);
 
 begin
-	
+
 	process(clk)
 		variable cnt : natural range MIN_COUNT to MAX_COUNT;
 	begin
 		if (rising_edge(clk)) then
-			case state is
+		case state is
 				when s0 =>
 					-- set read addr ROM
 					addr_f_rom <= cnt;
@@ -84,19 +84,16 @@ begin
 	end process;
 end rtl;
 
-		-- o"12345670", "001 010 011 100 101 110 111 000" =>
+-- o"12345670", "001 010 011 100 101 110 111 000" =>
 
-		-- 					B 	 G   BG  R   RB  RG RGB  -
+-- 					B 	 G   BG  R   RB  RG RGB  -
 
-		--:= (						  "00011110", 
-		--   "00000000",
-		--   "00000000",
-		--   "00000000",
-		--   "00000000",
-		--	  "00000000",
-		--	  "00000000",
-		--	  "00000000",
-
-
-
+--:= (						  "00011110", 
+--   "00000000",
+--   "00000000",
+--   "00000000",
+--   "00000000",
+--	  "00000000",
+--	  "00000000",
+--	  "00000000",
 

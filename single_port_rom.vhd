@@ -31,9 +31,9 @@ architecture rtl of single_port_rom is
 	-- default value.
 	signal rom : memory_t := ( -- o"12345670", "001 010 011 100 101 110 111 000" =>
 
-	                          -- 					                B  G   BG  R   RB  RG RGB  -
+	                          -- 					 	 B  G   BG  R   RB  RG RGB  -
 
-	                          --                					1   2    3  4   5   6  7   0
+	                          --                	 1   2    3  4   5   6  7   0
 									  o"11111111",
 	                          o"17711771",
 	                          o"71177117",
