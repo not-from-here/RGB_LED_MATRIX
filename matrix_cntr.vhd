@@ -42,7 +42,7 @@ component binary_counter is
 
 	generic(
 		MIN_COUNT : natural := 0;
-		MAX_COUNT : natural := 127
+		MAX_COUNT : natural := 96
 	);
 
 	port(

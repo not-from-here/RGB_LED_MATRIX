@@ -9,7 +9,7 @@ entity matrix_block is
 		row_out     : out STD_LOGIC_VECTOR(31 DOWNTO 0);
 		nR          : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
 		nG          : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-		clkX        : out std_logic;
+		--clkX      : out std_logic;
 		nB          : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
 	);
 end matrix_block;
@@ -19,7 +19,7 @@ architecture rtl of matrix_block is
 	component frequency_converter is
 		generic(
 			INPUT_CLK : INTEGER := 50_000_000;
-			OUT_CLK   : INTEGER := 15
+			OUT_CLK   : INTEGER := 150000
 		);
 		port(
 			clk_in  : in  std_logic;
@@ -118,5 +118,5 @@ begin
 	p5 : printer port map(clk => clk_out_x, smth => smth, waddr_t_ram => waddr_t_ram, data_f_rom => data_f_rom, data_t_ram => data_t_ram, addr_f_rom => addr_f_rom, we => we);
 	p4 : single_port_rom port map(clk => clk_out_x, q => data_f_rom, addr => addr_f_rom);
 	p6 : matrix_cntr port map(clk => clk_out_x, row_out => row_out, R => R, B => B, G => G, waddr => waddr_t_ram, data => data_t_ram, we => we);
-	clkX <= clk_out_x;
+	--clkX <= clk_out_x;
 end rtl;

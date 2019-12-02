@@ -4,7 +4,7 @@ use IEEE.std_logic_1164.all;
 entity printer is
 	generic(
 		MIN_COUNT      : natural := 0;
-		MAX_COUNT      : natural := 31;
+		MAX_COUNT      : natural := 32;
 		DATA_WIDTH_ROM : natural := 3 * 8;
 		ADDR_WIDTH_ROM : natural := 5;
 		DATA_WIDTH_RAM : natural := 8;
@@ -23,7 +23,7 @@ end printer;
 architecture rtl of printer is
 
 	-- Build an enumerated type for the state machine
-	type state_type is (s0, s1, s2);
+	type state_type is (s0, s1, s2, s3, s4, s5);
 
 	-- Register to hold the current state
 	signal state : state_type;
@@ -33,7 +33,7 @@ architecture rtl of printer is
 	signal d_f_r : std_logic_vector((DATA_WIDTH_ROM - 1) downto 0);
 
 begin
-
+	
 	process(clk)
 		variable cnt : natural range MIN_COUNT to MAX_COUNT;
 	begin
@@ -43,31 +43,44 @@ begin
 					-- set read addr ROM
 					addr_f_rom <= cnt;
 					--read o"01234567" from ROM
-					d_f_r      <= data_f_rom;
+					--d_f_r      <= data_f_rom;
 					-- set colors
-					set_color : for i in 0 to DATA_WIDTH_RAM - 1 loop
-						red(i)   <= d_f_r(i * 3);
-						green(i) <= d_f_r(i * 3 + 1);
-						blue(i)  <= d_f_r(i * 3 + 2);
-					end loop set_color;
-					we         <= '1';
 					state      <= s1;
 				when s1 =>
-					--write data colors to RAM & set write addr RAM
-					data_t_ram  <= red;
-					waddr_t_ram <= cnt;
-					data_t_ram  <= green;
-					waddr_t_ram <= cnt + 32;
-					data_t_ram  <= blue;
-					waddr_t_ram <= cnt + 32 + 32;
+					we         <= '1';
 					state       <= s2;
 				when s2 =>
+					--write data colors to RAM & set write addr RAM
+					data_t_ram  <= blue;
+					waddr_t_ram <= cnt;
+					state       <= s3;
+				when s3 =>
+					data_t_ram  <= green;
+					waddr_t_ram <= cnt + 32;
+					state       <= s4;
+				when s4 =>
+					data_t_ram  <= red;
+					waddr_t_ram <= cnt + 32 + 32;
+					state       <= s5;
+				when s5 =>
 					we    <= '0';
 					--inc counter
-					cnt   := cnt + 1;
+					if cnt < MAX_COUNT then
+						cnt   := cnt + 1;
+					else 
+						cnt   := 0;
+					end if;
 					state <= s0;
 			end case;
 		end if;
+	end process;
+	process(data_f_rom)
+	begin
+		set_color : for i in 0 to DATA_WIDTH_RAM - 1 loop
+			red(i)   <= data_f_rom(i * 3);
+			green(i) <= data_f_rom(i * 3 + 1);
+			blue(i)  <= data_f_rom(i * 3 + 2);
+		end loop set_color;
 	end process;
 end rtl;
 

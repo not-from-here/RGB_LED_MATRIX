@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone II"
 set_global_assignment -name DEVICE EP2C35F672C6
-set_global_assignment -name TOP_LEVEL_ENTITY matrix_block
+set_global_assignment -name TOP_LEVEL_ENTITY top_level
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:20:26  SEPTEMBER 24, 2019"
 set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
@@ -85,42 +85,45 @@ set_location_assignment PIN_K24 -to nR[3]
 set_location_assignment PIN_K23 -to nR[2]
 set_location_assignment PIN_K21 -to nR[1]
 set_location_assignment PIN_K19 -to nR[0]
-set_location_assignment PIN_F25 -to row_out[31]
-set_location_assignment PIN_F26 -to row_out[30]
-set_location_assignment PIN_N18 -to row_out[29]
-set_location_assignment PIN_P18 -to row_out[28]
-set_location_assignment PIN_G23 -to row_out[27]
-set_location_assignment PIN_G24 -to row_out[26]
-set_location_assignment PIN_K22 -to row_out[25]
-set_location_assignment PIN_G25 -to row_out[24]
-set_location_assignment PIN_T23 -to row_out[23]
-set_location_assignment PIN_T24 -to row_out[22]
-set_location_assignment PIN_T25 -to row_out[21]
-set_location_assignment PIN_T18 -to row_out[20]
-set_location_assignment PIN_T21 -to row_out[19]
-set_location_assignment PIN_T20 -to row_out[18]
-set_location_assignment PIN_U26 -to row_out[17]
-set_location_assignment PIN_U25 -to row_out[16]
-set_location_assignment PIN_K25 -to row_out[15]
-set_location_assignment PIN_K26 -to row_out[14]
-set_location_assignment PIN_M22 -to row_out[13]
-set_location_assignment PIN_M23 -to row_out[12]
-set_location_assignment PIN_M19 -to row_out[11]
-set_location_assignment PIN_M20 -to row_out[10]
-set_location_assignment PIN_N20 -to row_out[9]
-set_location_assignment PIN_M21 -to row_out[8]
-set_location_assignment PIN_M24 -to row_out[7]
-set_location_assignment PIN_M25 -to row_out[6]
-set_location_assignment PIN_N24 -to row_out[5]
-set_location_assignment PIN_P24 -to row_out[4]
-set_location_assignment PIN_R25 -to row_out[3]
-set_location_assignment PIN_R24 -to row_out[2]
-set_location_assignment PIN_R20 -to row_out[1]
-set_location_assignment PIN_T22 -to row_out[0]
+set_location_assignment PIN_T22 -to row_out[31]
+set_location_assignment PIN_R20 -to row_out[30]
+set_location_assignment PIN_R24 -to row_out[29]
+set_location_assignment PIN_R25 -to row_out[28]
+set_location_assignment PIN_P24 -to row_out[27]
+set_location_assignment PIN_N24 -to row_out[26]
+set_location_assignment PIN_M25 -to row_out[25]
+set_location_assignment PIN_M24 -to row_out[24]
+set_location_assignment PIN_M21 -to row_out[23]
+set_location_assignment PIN_N20 -to row_out[22]
+set_location_assignment PIN_M20 -to row_out[21]
+set_location_assignment PIN_M19 -to row_out[20]
+set_location_assignment PIN_M23 -to row_out[19]
+set_location_assignment PIN_M22 -to row_out[18]
+set_location_assignment PIN_K26 -to row_out[17]
+set_location_assignment PIN_K25 -to row_out[16]
+set_location_assignment PIN_U25 -to row_out[15]
+set_location_assignment PIN_U26 -to row_out[14]
+set_location_assignment PIN_T20 -to row_out[13]
+set_location_assignment PIN_T21 -to row_out[12]
+set_location_assignment PIN_T18 -to row_out[11]
+set_location_assignment PIN_T25 -to row_out[10]
+set_location_assignment PIN_T24 -to row_out[9]
+set_location_assignment PIN_T23 -to row_out[8]
+set_location_assignment PIN_G25 -to row_out[7]
+set_location_assignment PIN_K22 -to row_out[6]
+set_location_assignment PIN_G24 -to row_out[5]
+set_location_assignment PIN_G23 -to row_out[4]
+set_location_assignment PIN_P18 -to row_out[3]
+set_location_assignment PIN_N18 -to row_out[2]
+set_location_assignment PIN_F26 -to row_out[1]
+set_location_assignment PIN_F25 -to row_out[0]
 set_location_assignment PIN_N2 -to clk
 set_location_assignment PIN_N25 -to b_on_off_in
 set_location_assignment PIN_N26 -to b_swich_in
+set_global_assignment -name VHDL_FILE register_X.vhd
+set_global_assignment -name VHDL_FILE top_level.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name RTLV_GROUP_RELATED_NODES ON
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -9,7 +9,7 @@ entity binary_counter is
 
 	generic(
 		MIN_COUNT : natural := 0;
-		MAX_COUNT : natural := 95
+		MAX_COUNT : natural := 96
 	);
 
 	port(
@@ -27,8 +27,11 @@ begin
 		variable cnt : integer range MIN_COUNT to MAX_COUNT;
 	begin
 		if (rising_edge(clk)) then
-			--cnt := 0;
-			cnt := cnt + 1;
+			if cnt < MAX_COUNT then
+				cnt := cnt + 1;
+			else
+				cnt := 0;
+			end if;
 		end if;
 		qq   <= cnt;
 		q    <= cnt;
