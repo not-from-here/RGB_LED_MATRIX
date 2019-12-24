@@ -1,8 +1,8 @@
 |top_level
 clk => register_X:p1.clk
 clk => matrix_block:p2.clk
-b_on_off_in => register_X:p1.b_on_off_in
-b_swich_in => register_X:p1.b_swich_in
+enable => register_X:p1.enable
+reset => register_X:p1.reset
 data_in[0] => register_X:p1.data_in[0]
 data_in[1] => register_X:p1.data_in[1]
 data_in[2] => register_X:p1.data_in[2]
@@ -96,10 +96,10 @@ nB[7] <= matrix_block:p2.nB[7]
 |top_level|register_X:p1
 clk => reg_var2.CLK
 clk => reg_var.CLK
-b_on_off_in => reg_var.OUTPUTSELECT
-b_on_off_in => reg_var2.OUTPUTSELECT
-b_swich_in => reg_var.OUTPUTSELECT
-b_swich_in => reg_var2.ENA
+enable => reg_var.OUTPUTSELECT
+enable => reg_var2.OUTPUTSELECT
+reset => reg_var.OUTPUTSELECT
+reset => reg_var2.ENA
 data_in[0] => reg_var.DATAB
 data_in[1] => reg_var2.DATAB
 data_in[2] => ~NO_FANOUT~
