@@ -38,40 +38,42 @@ begin
 		variable cnt : natural range MIN_COUNT to MAX_COUNT;
 	begin
 		if (rising_edge(clk)) then
-		case state is
-				when s0 =>
-					-- set read addr ROM
-					addr_f_rom <= cnt;
-					--read o"01234567" from ROM
-					--d_f_r      <= data_f_rom;
-					-- set colors
-					state      <= s1;
-				when s1 =>
-					we         <= '1';
-					state       <= s2;
-				when s2 =>
-					--write data colors to RAM & set write addr RAM
-					data_t_ram  <= blue;
-					waddr_t_ram <= cnt;
-					state       <= s3;
-				when s3 =>
-					data_t_ram  <= green;
-					waddr_t_ram <= cnt + 32;
-					state       <= s4;
-				when s4 =>
-					data_t_ram  <= red;
-					waddr_t_ram <= cnt + 32 + 32;
-					state       <= s5;
-				when s5 =>
-					we    <= '0';
-					--inc counter
-					if cnt < MAX_COUNT then
-						cnt   := cnt + 1;
-					else 
-						cnt   := 0;
-					end if;
-					state <= s0;
-			end case;
+			if (smth = '1') then
+				case state is
+					when s0 =>
+						-- set read addr ROM
+						addr_f_rom <= cnt;
+						--read o"01234567" from ROM
+						--d_f_r      <= data_f_rom;
+						-- set colors
+						state      <= s1;
+					when s1 =>
+						we         <= '1';
+						state       <= s2;
+					when s2 =>
+						--write data colors to RAM & set write addr RAM
+						data_t_ram  <= blue;
+						waddr_t_ram <= cnt;
+						state       <= s3;
+					when s3 =>
+						data_t_ram  <= green;
+						waddr_t_ram <= cnt + 32;
+						state       <= s4;
+					when s4 =>
+						data_t_ram  <= red;
+						waddr_t_ram <= cnt + 32 + 32;
+						state       <= s5;
+					when s5 =>
+						we    <= '0';
+						--inc counter
+						if cnt < MAX_COUNT then
+							cnt   := cnt + 1;
+						else 
+							cnt   := 0;
+						end if;
+						state <= s0;
+				end case;
+			end if;
 		end if;
 	end process;
 	process(data_f_rom)

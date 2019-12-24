@@ -212,18 +212,19 @@ clk_out <= temporal.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_level|matrix_block:p2|button_cntr:p2
-clk => ~NO_FANOUT~
-on_off_in => ~NO_FANOUT~
-swich_in => ~NO_FANOUT~
-on_off_out <= on_off_out.DB_MAX_OUTPUT_PORT_TYPE
-swich_out <= comb.DB_MAX_OUTPUT_PORT_TYPE
+clk => swich_out~reg0.CLK
+clk => on_off_out~reg0.CLK
+on_off_in => on_off_out~reg0.DATAIN
+swich_in => swich_out~reg0.DATAIN
+on_off_out <= on_off_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+swich_out <= swich_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_level|matrix_block:p2|main_block:p3
-clk => ~NO_FANOUT~
-on_off_out => ~NO_FANOUT~
+clk => smth~reg0.CLK
+on_off_out => smth~reg0.DATAIN
 swich_out => ~NO_FANOUT~
-smth <= comb.DB_MAX_OUTPUT_PORT_TYPE
+smth <= smth~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_level|matrix_block:p2|printer:p5
@@ -254,7 +255,38 @@ clk => cnt[2].CLK
 clk => cnt[3].CLK
 clk => cnt[4].CLK
 clk => state~1.DATAIN
-smth => ~NO_FANOUT~
+smth => state.OUTPUTSELECT
+smth => state.OUTPUTSELECT
+smth => state.OUTPUTSELECT
+smth => state.OUTPUTSELECT
+smth => state.OUTPUTSELECT
+smth => state.OUTPUTSELECT
+smth => waddr_t_ram[3]~reg0.ENA
+smth => waddr_t_ram[2]~reg0.ENA
+smth => waddr_t_ram[1]~reg0.ENA
+smth => waddr_t_ram[0]~reg0.ENA
+smth => waddr_t_ram[4]~reg0.ENA
+smth => waddr_t_ram[5]~reg0.ENA
+smth => waddr_t_ram[6]~reg0.ENA
+smth => data_t_ram[0]~reg0.ENA
+smth => data_t_ram[1]~reg0.ENA
+smth => data_t_ram[2]~reg0.ENA
+smth => data_t_ram[3]~reg0.ENA
+smth => data_t_ram[4]~reg0.ENA
+smth => data_t_ram[5]~reg0.ENA
+smth => data_t_ram[6]~reg0.ENA
+smth => data_t_ram[7]~reg0.ENA
+smth => we~reg0.ENA
+smth => addr_f_rom[0]~reg0.ENA
+smth => addr_f_rom[1]~reg0.ENA
+smth => addr_f_rom[2]~reg0.ENA
+smth => addr_f_rom[3]~reg0.ENA
+smth => addr_f_rom[4]~reg0.ENA
+smth => cnt[0].ENA
+smth => cnt[1].ENA
+smth => cnt[2].ENA
+smth => cnt[3].ENA
+smth => cnt[4].ENA
 data_f_rom[0] => Selector8.IN5
 data_f_rom[1] => Selector8.IN6
 data_f_rom[2] => Selector8.IN7

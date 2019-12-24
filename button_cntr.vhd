@@ -11,4 +11,11 @@ entity button_cntr is
 end button_cntr;
 architecture rtl of button_cntr is
 begin
+	process(clk)
+	begin
+	if (rising_edge(clk)) then
+		on_off_out <= on_off_in;
+		swich_out <= swich_in;
+	end if;
+	end process;
 end rtl;

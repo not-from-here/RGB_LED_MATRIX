@@ -11,4 +11,10 @@ end main_block;
 
 architecture rtl of main_block is
 begin
+process(clk)
+	begin
+	if (rising_edge(clk)) then
+		smth <= on_off_out;
+	end if;
+	end process;
 end rtl;
