@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
--- DATE "12/24/2019 13:57:07"
+-- DATE "01/30/2020 13:58:17"
 
 -- 
 -- Device: Altera EP2C35F672C6 Package FBGA672
@@ -355,16 +355,16 @@ SIGNAL \p2|p6|p2|ram_rtl_0|auto_generated|ram_block1a4\ : std_logic;
 SIGNAL \p2|p6|p2|ram_rtl_0|auto_generated|ram_block1a5\ : std_logic;
 SIGNAL \p2|p6|p2|ram_rtl_0|auto_generated|ram_block1a6\ : std_logic;
 SIGNAL \p2|p6|p2|ram_rtl_0|auto_generated|ram_block1a7\ : std_logic;
-SIGNAL \data_in~combout\ : std_logic_vector(31 DOWNTO 0);
-SIGNAL \p2|p5|cnt\ : std_logic_vector(4 DOWNTO 0);
-SIGNAL \p2|p6|p1|cnt\ : std_logic_vector(6 DOWNTO 0);
-SIGNAL \p2|p6|p4|B\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \p2|p4|q\ : std_logic_vector(23 DOWNTO 0);
-SIGNAL \p2|p5|data_t_ram\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \p2|p5|waddr_t_ram\ : std_logic_vector(6 DOWNTO 0);
 SIGNAL \p2|p6|p4|R\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \p2|p5|addr_f_rom\ : std_logic_vector(4 DOWNTO 0);
 SIGNAL \p2|p6|p4|G\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \p2|p6|p4|B\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \data_in~combout\ : std_logic_vector(31 DOWNTO 0);
+SIGNAL \p2|p5|addr_f_rom\ : std_logic_vector(4 DOWNTO 0);
+SIGNAL \p2|p5|data_t_ram\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \p2|p4|q\ : std_logic_vector(23 DOWNTO 0);
+SIGNAL \p2|p6|p1|cnt\ : std_logic_vector(6 DOWNTO 0);
+SIGNAL \p2|p5|cnt\ : std_logic_vector(4 DOWNTO 0);
+SIGNAL \p2|p5|waddr_t_ram\ : std_logic_vector(6 DOWNTO 0);
 SIGNAL \p2|p6|p4|ALT_INV_B\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \p2|p6|p4|ALT_INV_G\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \p2|p6|p4|ALT_INV_R\ : std_logic_vector(7 DOWNTO 0);

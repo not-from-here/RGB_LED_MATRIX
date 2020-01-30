@@ -1,0 +1,32 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity register_X is
+	port(
+		clk         : in  std_logic;
+		b_on_off_in : in  std_logic;
+		b_swich_in  : in  std_logic;
+		--enable : in std_logic;
+		--srst : in std_logic;
+		data_in     : in  std_logic_vector(31 downto 0);
+		data_out    : out std_logic_vector(31 downto 0)
+	);
+end register_X;
+
+architecture arh of register_X is
+begin
+	process(clk, b_swich_in, data_in, b_on_off_in)
+		variable reg_var : std_logic_vector(31 downto 0) := (others => '0');
+	begin
+		if rising_edge(clk) then
+			if (b_swich_in = '1') then
+				reg_var := (others => '0');
+			elsif (b_on_off_in = '1') then
+				reg_var := data_in;
+			end if;
+		end if;
+		data_out <= reg_var;
+	end process;
+end arh;

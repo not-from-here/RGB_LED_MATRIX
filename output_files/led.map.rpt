@@ -1,5 +1,5 @@
 Analysis & Synthesis report for led
-Tue Dec 24 13:56:24 2019
+Thu Jan 30 13:57:48 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -57,7 +57,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Dec 24 13:56:24 2019           ;
+; Analysis & Synthesis Status        ; Successful - Thu Jan 30 13:57:48 2020           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; led                                             ;
 ; Top-level Entity Name              ; top_level                                       ;
@@ -170,36 +170,36 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                ;
-+---------------------------------------------------------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                              ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                      ; Library ;
-+---------------------------------------------------------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------------------------------------------+---------+
-; frequency_converter.vhd                                       ; yes             ; User VHDL File                                        ; F:/Desktop/cinema_bizarre/LEDAE/LED/frequency_converter.vhd                                       ;         ;
-; single_port_rom.vhd                                           ; yes             ; User VHDL File                                        ; F:/Desktop/cinema_bizarre/LEDAE/LED/single_port_rom.vhd                                           ;         ;
-; binary_counter.vhd                                            ; yes             ; User VHDL File                                        ; F:/Desktop/cinema_bizarre/LEDAE/LED/binary_counter.vhd                                            ;         ;
-; decode.vhd                                                    ; yes             ; User VHDL File                                        ; F:/Desktop/cinema_bizarre/LEDAE/LED/decode.vhd                                                    ;         ;
-; button_cntr.vhd                                               ; yes             ; User VHDL File                                        ; F:/Desktop/cinema_bizarre/LEDAE/LED/button_cntr.vhd                                               ;         ;
-; main_block.vhd                                                ; yes             ; User VHDL File                                        ; F:/Desktop/cinema_bizarre/LEDAE/LED/main_block.vhd                                                ;         ;
-; matrix_cntr.vhd                                               ; yes             ; User VHDL File                                        ; F:/Desktop/cinema_bizarre/LEDAE/LED/matrix_cntr.vhd                                               ;         ;
-; matrix_block.vhd                                              ; yes             ; User VHDL File                                        ; F:/Desktop/cinema_bizarre/LEDAE/LED/matrix_block.vhd                                              ;         ;
-; simple_dual_port_ram_single_clock.vhd                         ; yes             ; User VHDL File                                        ; F:/Desktop/cinema_bizarre/LEDAE/LED/simple_dual_port_ram_single_clock.vhd                         ;         ;
-; DEmux.vhd                                                     ; yes             ; User VHDL File                                        ; F:/Desktop/cinema_bizarre/LEDAE/LED/DEmux.vhd                                                     ;         ;
-; printer.vhd                                                   ; yes             ; User VHDL File                                        ; F:/Desktop/cinema_bizarre/LEDAE/LED/printer.vhd                                                   ;         ;
-; register_X.vhd                                                ; yes             ; User VHDL File                                        ; F:/Desktop/cinema_bizarre/LEDAE/LED/register_X.vhd                                                ;         ;
-; top_level.vhd                                                 ; yes             ; User VHDL File                                        ; F:/Desktop/cinema_bizarre/LEDAE/LED/top_level.vhd                                                 ;         ;
-; altsyncram.tdf                                                ; yes             ; Megafunction                                          ; f:/desktop/need/ae/quartus/libraries/megafunctions/altsyncram.tdf                                 ;         ;
-; stratix_ram_block.inc                                         ; yes             ; Megafunction                                          ; f:/desktop/need/ae/quartus/libraries/megafunctions/stratix_ram_block.inc                          ;         ;
-; lpm_mux.inc                                                   ; yes             ; Megafunction                                          ; f:/desktop/need/ae/quartus/libraries/megafunctions/lpm_mux.inc                                    ;         ;
-; lpm_decode.inc                                                ; yes             ; Megafunction                                          ; f:/desktop/need/ae/quartus/libraries/megafunctions/lpm_decode.inc                                 ;         ;
-; aglobal130.inc                                                ; yes             ; Megafunction                                          ; f:/desktop/need/ae/quartus/libraries/megafunctions/aglobal130.inc                                 ;         ;
-; a_rdenreg.inc                                                 ; yes             ; Megafunction                                          ; f:/desktop/need/ae/quartus/libraries/megafunctions/a_rdenreg.inc                                  ;         ;
-; altrom.inc                                                    ; yes             ; Megafunction                                          ; f:/desktop/need/ae/quartus/libraries/megafunctions/altrom.inc                                     ;         ;
-; altram.inc                                                    ; yes             ; Megafunction                                          ; f:/desktop/need/ae/quartus/libraries/megafunctions/altram.inc                                     ;         ;
-; altdpram.inc                                                  ; yes             ; Megafunction                                          ; f:/desktop/need/ae/quartus/libraries/megafunctions/altdpram.inc                                   ;         ;
-; db/altsyncram_3kn1.tdf                                        ; yes             ; Auto-Generated Megafunction                           ; F:/Desktop/cinema_bizarre/LEDAE/LED/db/altsyncram_3kn1.tdf                                        ;         ;
-; db/led.ram0_simple_dual_port_ram_single_clock_c2af7d2.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; F:/Desktop/cinema_bizarre/LEDAE/LED/db/led.ram0_simple_dual_port_ram_single_clock_c2af7d2.hdl.mif ;         ;
-+---------------------------------------------------------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                      ;
++---------------------------------------------------------------+-----------------+-------------------------------------------------------+-----------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                              ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                            ; Library ;
++---------------------------------------------------------------+-----------------+-------------------------------------------------------+-----------------------------------------------------------------------------------------+---------+
+; frequency_converter.vhd                                       ; yes             ; User VHDL File                                        ; F:/Desktop/RGB_LED_MATRIX/frequency_converter.vhd                                       ;         ;
+; single_port_rom.vhd                                           ; yes             ; User VHDL File                                        ; F:/Desktop/RGB_LED_MATRIX/single_port_rom.vhd                                           ;         ;
+; binary_counter.vhd                                            ; yes             ; User VHDL File                                        ; F:/Desktop/RGB_LED_MATRIX/binary_counter.vhd                                            ;         ;
+; decode.vhd                                                    ; yes             ; User VHDL File                                        ; F:/Desktop/RGB_LED_MATRIX/decode.vhd                                                    ;         ;
+; button_cntr.vhd                                               ; yes             ; User VHDL File                                        ; F:/Desktop/RGB_LED_MATRIX/button_cntr.vhd                                               ;         ;
+; main_block.vhd                                                ; yes             ; User VHDL File                                        ; F:/Desktop/RGB_LED_MATRIX/main_block.vhd                                                ;         ;
+; matrix_cntr.vhd                                               ; yes             ; User VHDL File                                        ; F:/Desktop/RGB_LED_MATRIX/matrix_cntr.vhd                                               ;         ;
+; matrix_block.vhd                                              ; yes             ; User VHDL File                                        ; F:/Desktop/RGB_LED_MATRIX/matrix_block.vhd                                              ;         ;
+; simple_dual_port_ram_single_clock.vhd                         ; yes             ; User VHDL File                                        ; F:/Desktop/RGB_LED_MATRIX/simple_dual_port_ram_single_clock.vhd                         ;         ;
+; DEmux.vhd                                                     ; yes             ; User VHDL File                                        ; F:/Desktop/RGB_LED_MATRIX/DEmux.vhd                                                     ;         ;
+; printer.vhd                                                   ; yes             ; User VHDL File                                        ; F:/Desktop/RGB_LED_MATRIX/printer.vhd                                                   ;         ;
+; register_X.vhd                                                ; yes             ; User VHDL File                                        ; F:/Desktop/RGB_LED_MATRIX/register_X.vhd                                                ;         ;
+; top_level.vhd                                                 ; yes             ; User VHDL File                                        ; F:/Desktop/RGB_LED_MATRIX/top_level.vhd                                                 ;         ;
+; altsyncram.tdf                                                ; yes             ; Megafunction                                          ; f:/desktop/need/ae/quartus/libraries/megafunctions/altsyncram.tdf                       ;         ;
+; stratix_ram_block.inc                                         ; yes             ; Megafunction                                          ; f:/desktop/need/ae/quartus/libraries/megafunctions/stratix_ram_block.inc                ;         ;
+; lpm_mux.inc                                                   ; yes             ; Megafunction                                          ; f:/desktop/need/ae/quartus/libraries/megafunctions/lpm_mux.inc                          ;         ;
+; lpm_decode.inc                                                ; yes             ; Megafunction                                          ; f:/desktop/need/ae/quartus/libraries/megafunctions/lpm_decode.inc                       ;         ;
+; aglobal130.inc                                                ; yes             ; Megafunction                                          ; f:/desktop/need/ae/quartus/libraries/megafunctions/aglobal130.inc                       ;         ;
+; a_rdenreg.inc                                                 ; yes             ; Megafunction                                          ; f:/desktop/need/ae/quartus/libraries/megafunctions/a_rdenreg.inc                        ;         ;
+; altrom.inc                                                    ; yes             ; Megafunction                                          ; f:/desktop/need/ae/quartus/libraries/megafunctions/altrom.inc                           ;         ;
+; altram.inc                                                    ; yes             ; Megafunction                                          ; f:/desktop/need/ae/quartus/libraries/megafunctions/altram.inc                           ;         ;
+; altdpram.inc                                                  ; yes             ; Megafunction                                          ; f:/desktop/need/ae/quartus/libraries/megafunctions/altdpram.inc                         ;         ;
+; db/altsyncram_3kn1.tdf                                        ; yes             ; Auto-Generated Megafunction                           ; F:/Desktop/RGB_LED_MATRIX/db/altsyncram_3kn1.tdf                                        ;         ;
+; db/led.ram0_simple_dual_port_ram_single_clock_c2af7d2.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; F:/Desktop/RGB_LED_MATRIX/db/led.ram0_simple_dual_port_ram_single_clock_c2af7d2.hdl.mif ;         ;
++---------------------------------------------------------------+-----------------+-------------------------------------------------------+-----------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------------------------------------------+
@@ -540,7 +540,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -550,7 +550,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Dec 24 13:56:12 2019
+    Info: Processing started: Thu Jan 30 13:57:41 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off led -c led
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file frequency_converter.vhd
@@ -753,9 +753,9 @@ Info (21057): Implemented 269 device resources after synthesis - the final resou
     Info (21061): Implemented 170 logic cells
     Info (21064): Implemented 8 RAM segments
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 77 warnings
-    Info: Peak virtual memory: 4665 megabytes
-    Info: Processing ended: Tue Dec 24 13:56:24 2019
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Peak virtual memory: 4661 megabytes
+    Info: Processing ended: Thu Jan 30 13:57:48 2020
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:05
 
 

@@ -123,10 +123,10 @@ set_location_assignment PIN_N26 -to b_swich_in
 set_global_assignment -name VHDL_FILE register_X.vhd
 set_global_assignment -name VHDL_FILE top_level.vhd
 set_global_assignment -name RTLV_GROUP_RELATED_NODES ON
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name RTLV_REMOVE_FANOUT_FREE_REGISTERS ON
 set_global_assignment -name RTLV_SIMPLIFIED_LOGIC ON
 set_global_assignment -name RTLV_GROUP_COMB_LOGIC_IN_CLOUD ON
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
